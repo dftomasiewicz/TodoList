@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!--fxml moze miec tylko jedna graficzne okienko (dialog),
+wiec dlatego tutaj tworzymy drugie wraz z drugim controllerem-->
+
+<DialogPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dft.todolist.DialogController">
+    <headerText>
+        We could put instruction here
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Short Description: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="shortDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Details:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextArea fx:id="detailsArea" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Deadline:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="deadlinePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>
